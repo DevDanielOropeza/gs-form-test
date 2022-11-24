@@ -4,9 +4,9 @@ function App() {
 
   const [users, setUsers] = useState([]);
 
-  const emailRef = useRef("");
-  const nombreRef = useRef("");
-  const countryRef = useRef("");
+  const emailRef = useRef(null);
+  const nombreRef = useRef(null);
+  const countryRef = useRef(null);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -16,9 +16,7 @@ function App() {
       name: nombreRef.current.value,
       country: countryRef.current.value,
     }]);
-    emailRef.current.value = "";
-    nombreRef.current.value = "";
-    countryRef.current.value = "México"
+
   }
   return (
     <main className="container mt-5">
